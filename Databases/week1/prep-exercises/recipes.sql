@@ -49,7 +49,9 @@ CREATE TABLE recipe_steps (
 INSERT INTO recipes (name) VALUES
 ('Miso Soup'),
 ('Matcha Cheesecake'),
-('Vegetable Stir-Fry');
+('Vegetable Stir-Fry'),
+('Ramen'),
+('Chocolate Cake');
 
 INSERT INTO categories (name) VALUES
 ('Japanese'),
@@ -71,7 +73,12 @@ INSERT INTO ingredients (name) VALUES
 ('Carrots'),
 ('Bell Peppers'),
 ('Soy Sauce'),
-('Sesame Oil');
+('Sesame Oil'),
+('Ramen Noodles'),
+('Pork Belly'),
+('Flour'),
+('Cocoa Powder'),
+('Baking Powder');
 
 INSERT INTO steps (description) VALUES
 ('Boil dashi stock in a pot.'),
@@ -85,13 +92,20 @@ INSERT INTO steps (description) VALUES
 ('Pour the mixture over the crust and bake at 160°C for 1 hour.'),
 ('Chop all vegetables into bite-sized pieces.'),
 ('Heat sesame oil in a pan and stir-fry vegetables.'),
-('Add soy sauce and cook for 5 minutes.');
+('Add soy sauce and cook for 5 minutes.'),
+('Boil ramen noodles according to package instructions.'),
+('Cook pork belly in a pan until crispy.'),
+('Mix flour, sugar, cocoa powder, and baking powder.'),
+('Add eggs and butter, then mix until smooth.'),
+('Bake at 180°C for 30 minutes.');
 
 INSERT INTO recipe_categories (recipe_id, category_id) VALUES
 (1, 1),
 (2, 2),
 (2, 1),
-(3, 3);
+(3, 3),
+(4, 1),
+(5, 2);
 
 INSERT INTO recipe_ingredients (recipe_id, ingredient_id) VALUES
 (1, 1),
@@ -104,23 +118,39 @@ INSERT INTO recipe_ingredients (recipe_id, ingredient_id) VALUES
 (2, 8),
 (2, 9),
 (2, 10),
-(3, 11),  
-(3, 12),  
-(3, 13),  
-(3, 14), 
-(3, 15);
+(3, 11),
+(3, 12),
+(3, 13),
+(3, 14),
+(3, 15),
+(4, 3),
+(4, 16),
+(4, 17),
+(4, 4),
+(5, 6),
+(5, 18),
+(5, 19),
+(5, 20),
+(5, 8),
+(5, 10);
 
 INSERT INTO recipe_steps (recipe_id, step_id, step_order) VALUES
-(1, 1, 1), 
-(1, 2, 2), 
-(1, 3, 3), 
+(1, 1, 1),
+(1, 2, 2),
+(1, 3, 3),
 (1, 4, 4),
-(2, 5, 1), 
+(2, 5, 1),
 (2, 6, 2),
 (2, 7, 3),
-(2, 8, 4), 
-(2, 9, 5), 
+(2, 8, 4),
+(2, 9, 5),
 (3, 10, 1),
 (3, 11, 2),
-(3, 12, 3);
-
+(3, 12, 3),
+(4, 1, 1),
+(4, 13, 2),
+(4, 14, 3),
+(4, 4, 4),
+(5, 15, 1),
+(5, 16, 2),
+(5, 17, 3);
