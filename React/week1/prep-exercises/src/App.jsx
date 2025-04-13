@@ -12,8 +12,14 @@ function App() {
 function Counter() {
   const [count, setCount] = useState(0);
 
-  const countPlusOne = () => {
-    setCount(count + 1);
+  // Checks if calculated count is lower than 0
+  const countChanger = (number) => {
+    const nextCount = count + number;
+    if (nextCount < 0) {
+      setCount(0);
+    } else {
+      setCount(nextCount);
+    };
   };
 
   const feedback = count > 10 ? "It's higher than 10!" : "Keep counting...";
@@ -24,7 +30,10 @@ function Counter() {
         <Count count={count}/>
       </div>
       <div>
-        <Button onClick={countPlusOne}/>
+        <Button onClick={() => countChanger(2)}>+2</Button>
+        <Button onClick={() => countChanger(1)}>+1</Button>
+        <Button onClick={() => countChanger(-1)}>-1</Button>
+        <Button onClick={() => countChanger(-2)}>-2</Button>
       </div>
       <div>
         {feedback}
@@ -41,10 +50,10 @@ function Count({count}) {
   );
 };
 
-function Button({onClick}) {
+function Button({onClick, children}) {
   return (
     <button onClick={onClick}>
-      Add 1!
+      {children}
     </button>
   );
 };
