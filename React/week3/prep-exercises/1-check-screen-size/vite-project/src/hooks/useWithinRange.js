@@ -11,7 +11,7 @@ function useWithinRange(minWidth, maxWidth) {
     isWithinRange = false;
   };
 
-  useDebugValue(`width:${width} X height:${height} | ${isWithinRange ? '🟢' : '🔴'}`);
+  useDebugValue(`minWidth:${minWidth} maxWidth:${maxWidth} | ${isWithinRange ? '🟢' : '🔴'}`);
 
   return {isWithinRange};
 };

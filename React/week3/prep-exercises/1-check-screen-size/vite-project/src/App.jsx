@@ -1,6 +1,6 @@
 import './App.css'
-import useWindowSize from './useWindowSize';
-import useWithinRange from './useWithinRange'
+import useWindowSize from './hooks/useWindowSize';
+import useWithinRange from './hooks/useWithinRange'
 // import { Small, Medium, Big } from './beanHeads';
 
 function App() {
