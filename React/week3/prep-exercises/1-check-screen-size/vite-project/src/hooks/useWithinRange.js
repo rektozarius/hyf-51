@@ -13,7 +13,7 @@ function useWithinRange(minWidth, maxWidth) {
 
   useDebugValue(`minWidth:${minWidth} maxWidth:${maxWidth} | ${isWithinRange ? '🟢' : '🔴'}`);
 
-  return {isWithinRange};
+  return isWithinRange;
 };
 
 export default useWithinRange;

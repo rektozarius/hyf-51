@@ -1,7 +1,7 @@
 import './App.css'
 import useWindowSize from './hooks/useWindowSize';
 import useWithinRange from './hooks/useWithinRange'
-// import { Small, Medium, Big } from './beanHeads';
+import { Small, Medium, Big } from './components/beanHeads';
 
 function App() {
   const {width, height} = useWindowSize();
@@ -15,9 +15,9 @@ function App() {
         ({width}) X ({height})
       </div>
       <div>
-        {/* {isBigWidth && <Big />}
+        {isBigWidth && <Big />}
         {isMediumWidth && <Medium />}
-        {isSmallWidth && <Small />} */}
+        {isSmallWidth && <Small />}
       </div>
     </>
   );
